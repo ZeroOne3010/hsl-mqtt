@@ -1,4 +1,4 @@
-#HSL MQTT
+# HSL MQTT
 
 🇫🇮 Tämä Java-sovellus kytkeytyy Helsingin seudun liikenteen (HSL) [reaaliaikaiseen Digitransit-rajapintaan](https://digitransit.fi/en/developers/apis/4-realtime-api/vehicle-positions/), 
 josta voi seurata HSL-alueen julkisen liikenteen ajoneuvojen tapahtumia, kuten sijaintipäivityksiä.
@@ -7,7 +7,7 @@ josta voi seurata HSL-alueen julkisen liikenteen ajoneuvojen tapahtumia, kuten s
 of the Helsinki Regional Transport Authority (HSL). From the API one can follow the events, such 
 as location updates, of the public transport vehicles of the HSL area.
 
-##Usage
+## Usage
 
 This is a command line application that requires two or more parameters to start:
 
