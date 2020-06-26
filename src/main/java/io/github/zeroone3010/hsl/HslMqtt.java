@@ -74,9 +74,7 @@ public class HslMqtt {
     client.setCallback(new MqttCallback() {
       @Override
       public void connectionLost(Throwable cause) {
-        System.err.println("Connection lost!");
-        cause.printStackTrace();
-        System.exit(1);
+        System.err.println("Connection lost! Exception: " + cause);
       }
 
       @Override
