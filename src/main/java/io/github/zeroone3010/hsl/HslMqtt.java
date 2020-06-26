@@ -87,7 +87,7 @@ public class HslMqtt {
             "\t(" + msg.getOperatorName() + ")" +
             "\tv=" + msg.getSpeed().getKilometersPerHour() + " km/h" +
             "\ta=" + msg.getAccelerationMetersPerSecondSquared() + " m/s²" +
-            "\theading=" + msg.getHeading() + '⁰' +
+            "\theading=" + msg.getHeading() + "⁰ (" + ArrowUtil.getArrowForCompassAngle(msg.getHeading()) + ')' +
             "\tat N " + msg.getLatitude() + ", E " + msg.getLongitude() +
             "\toffset from schedule: " + msg.getOffsetFromScheduleInSeconds() + " s" +
             "\tstartTime: " + msg.getStartTime() +
