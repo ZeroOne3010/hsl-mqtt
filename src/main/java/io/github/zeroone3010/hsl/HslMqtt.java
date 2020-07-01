@@ -11,6 +11,7 @@ import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
+import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
 import java.io.PrintStream;
 import java.time.format.DateTimeFormatter;
@@ -55,7 +56,7 @@ public class HslMqtt {
     System.arraycopy(args, 1, topicFilters, 0, args.length - 1);
 
     final String clientId = UUID.randomUUID().toString();
-    final IMqttClient client = new MqttClient("wss://mqtt.hsl.fi:443/", clientId);
+    final IMqttClient client = new MqttClient("wss://mqtt.hsl.fi:443/", clientId, new MemoryPersistence());
 
     final MqttConnectOptions options = new MqttConnectOptions();
     options.setAutomaticReconnect(true);
