@@ -1,11 +1,17 @@
 # HSL MQTT
 
-🇫🇮 Tämä Java-sovellus kytkeytyy Helsingin seudun liikenteen (HSL) [reaaliaikaiseen Digitransit-rajapintaan](https://digitransit.fi/en/developers/apis/4-realtime-api/vehicle-positions/), 
+🇫🇮 Tämä Java-sovellus kytkeytyy Helsingin seudun liikenteen (HSL) [reaaliaikaiseen Digitransit-rajapintaan](https://digitransit.fi/en/developers/apis/4-realtime-api/vehicle-positions/),
 josta voi seurata HSL-alueen julkisen liikenteen ajoneuvojen tapahtumia, kuten sijaintipäivityksiä.
 
-🇬🇧 This Java application connects to the [real time Digitransit API](https://digitransit.fi/en/developers/apis/4-realtime-api/vehicle-positions/) 
-of the Helsinki Regional Transport Authority (HSL). From the API one can follow the events, such 
+Huomaa: jalostetumpi versio tästä konseptista löytyy toisaalta
+[TypeScriptillä tehdyn Twitter-botin](https://github.com/ZeroOne3010/speeding-hsl-busses) muodossa.
+
+🇬🇧 This Java application connects to the [real time Digitransit API](https://digitransit.fi/en/developers/apis/4-realtime-api/vehicle-positions/)
+of the Helsinki Regional Transport Authority (HSL). From the API one can follow the events, such
 as location updates, of the public transport vehicles of the HSL area.
+
+Note: a more refined version of this concept exists elsewhere in the form of a
+[Twitter-bot written in TypeScript](https://github.com/ZeroOne3010/speeding-hsl-busses).
 
 ## Usage
 
@@ -17,11 +23,11 @@ This is a command line application that requires two or more parameters to start
 2. One or more MQTT topics. These are the most important parameters and can be used to define
    the geographic area to watch. The format is quite tricky, see the API documentation again
    for further reference.
-   
+
 To summarize, one valid set of command line arguments could look like this:
 
     40 "/hfp/v2/journey/ongoing/+/+/+/+/+/+/+/+/+/+/60;24/19/85/#"
-    
+
 And it would yield an output that would be similar to this:
 
 ```
